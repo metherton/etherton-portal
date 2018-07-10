@@ -13,4 +13,10 @@ public class EthertonportalserverApplicationTests {
 //	public void contextLoads() {
 //	}
 
+	@Test
+	public void testDummy() {
+		assert true;
+	}
+
+
 }
