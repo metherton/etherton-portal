@@ -26,6 +26,8 @@ public class User {
     private String placeOfBirth;
     private String branch;
     private String gender;
+    private long fatherId;
+    private long motherId;
 
     public String getFirstName() {
         return firstName;
@@ -70,6 +72,22 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getFatherId() {
+        return fatherId;
+    }
+
+    public void setFatherId(long fatherId) {
+        this.fatherId = fatherId;
+    }
+
+    public long getMotherId() {
+        return motherId;
+    }
+
+    public void setMotherId(long motherId) {
+        this.motherId = motherId;
     }
 
     public String getSurname() {

@@ -5,6 +5,7 @@ import com.martinetherton.models.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class UserController {
 //        return "The user id is: " + userId;
 //    }
 
-    @RequestMapping("/users")
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
     @ResponseBody
     public Iterable<User> getUsers() {
 //        List<User> users = new ArrayList<>();
@@ -52,5 +53,20 @@ public class UserController {
             return null;
         }
     }
+
+    @RequestMapping(value = "/users", method = RequestMethod.POST)
+    @ResponseBody
+    public String create(User user) {
+        String userId = "";
+        try {
+            userDao.save(user);
+            userId = String.valueOf(user.getId());
+        }
+        catch (Exception ex) {
+            return "Error creating the user: " + ex.toString();
+        }
+        return "User succesfully created with id = " + userId;
+    }
+
 
 }

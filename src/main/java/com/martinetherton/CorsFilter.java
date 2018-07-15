@@ -26,9 +26,16 @@ public class CorsFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
-        response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("Access-Control-Allow-Headers", "x-requested-with,X-Prototype-Version,Content-Type,Cache-Control,Pragma,Origin,authorization, x-auth-token, x-xsrf-token");
         response.setHeader("Access-Control-Max-Age", "3600");
-        response.setHeader("Access-Control-Allow-Headers", "authorization, x-auth-token, x-requested-with,x-xsrf-token");
+   //     response.setHeader("Access-Control-Allow-Headers", "authorization, x-auth-token, x-requested-with,x-xsrf-token");
+
+
+
+//        res.setHeader("Access-Control-Allow-Origin", "http://localhost:8081");res.setHeader("Access-Control-Allow-Credentials", "true");
+//        res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST, GET");res.setHeader("Access-Control-Expose-Headers","Access-Control-Allow-Origin");
+//        res.setHeader("Access-Control-Allow-Headers", "X-Requested-With,X-Prototype-Version,Content-Type,Cache-Control,Pragma,Origin");
 
 //        if (request.getMethod() != "OPTIONS") {
         if( ! "OPTIONS".equals(request.getMethod())) {
