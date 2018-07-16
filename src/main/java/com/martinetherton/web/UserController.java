@@ -39,8 +39,8 @@ public class UserController {
 //        return "The user id is: " + userId;
 //    }
 
-    @RequestMapping("/users")
-   // @RequestMapping(value = "/users", method = RequestMethod.GET)
+   // @RequestMapping("/users")
+    @RequestMapping(value="/users", method=RequestMethod.GET)
     @ResponseBody
     public Iterable<User> getUsers() {
 //        List<User> users = new ArrayList<>();
