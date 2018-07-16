@@ -55,19 +55,19 @@ public class UserController {
         }
     }
 
-//    @RequestMapping(value = "/users", method = RequestMethod.POST)
-//    @ResponseBody
-//    public String create(User user) {
-//        String userId = "";
-//        try {
-//            userDao.save(user);
-//            userId = String.valueOf(user.getId());
-//        }
-//        catch (Exception ex) {
-//            return "Error creating the user: " + ex.toString();
-//        }
-//        return "User succesfully created with id = " + userId;
-//    }
+    @RequestMapping(value="/users", method=RequestMethod.POST)
+    @ResponseBody
+    public String create(User user) {
+        String userId = "";
+        try {
+            userDao.save(user);
+            userId = String.valueOf(user.getId());
+        }
+        catch (Exception ex) {
+            return "Error creating the user: " + ex.toString();
+        }
+        return "User succesfully created with id = " + userId;
+    }
 
 
 }
