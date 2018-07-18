@@ -35,17 +35,17 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
+    public String getSurname() {
 
-        return name;
+        return surname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     @NotNull
-    private String name;
+    private String surname;
 
     // Public methods
 
@@ -55,9 +55,9 @@ public class User {
         this.id = id;
     }
 
-    public User(String firstName, String name) {
+    public User(String firstName, String surname) {
         this.firstName = firstName;
-        this.name = name;
+        this.surname = surname;
     }
 
 }
