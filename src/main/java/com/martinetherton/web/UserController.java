@@ -4,6 +4,7 @@ import com.martinetherton.models.User;
 import com.martinetherton.models.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -57,9 +58,10 @@ public class UserController {
 
     @RequestMapping(value="/users", method=RequestMethod.POST)
     @ResponseBody
-    public String create(User user) {
+    public String create(@RequestBody UserTransport userTransport) {
         String userId = "";
         try {
+            User user = new User(userTransport.getFirstName(), userTransport.getSurname());
             userDao.save(user);
             userId = String.valueOf(user.getId());
         }
