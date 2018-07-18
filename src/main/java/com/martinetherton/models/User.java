@@ -2,6 +2,7 @@ package com.martinetherton.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.sql.Date;
 
 /**
  * Created by martin on 23/05/17.
@@ -70,4 +71,13 @@ public class User {
         this.placeOfBirth = placeOfBirth;
     }
 
+    private Date dateOfBirth;
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 }
