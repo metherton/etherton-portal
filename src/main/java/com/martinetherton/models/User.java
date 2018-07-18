@@ -60,4 +60,14 @@ public class User {
         this.surname = surname;
     }
 
+    private String placeOfBirth;
+
+    public String getPlaceOfBirth() {
+        return placeOfBirth;
+    }
+
+    public void setPlaceOfBirth(String placeOfBirth) {
+        this.placeOfBirth = placeOfBirth;
+    }
+
 }
