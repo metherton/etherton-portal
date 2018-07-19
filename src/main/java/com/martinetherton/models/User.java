@@ -80,4 +80,40 @@ public class User {
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
+
+    private String branch;
+    public String getBranch() {
+        return branch;
+    }
+    public void setBranch(String branch) {
+        this.branch = branch;
+    }
+
+    private long fatherId;
+    private long motherId;
+    private String gender;
+
+    public long getFatherId() {
+        return fatherId;
+    }
+    public long getMotherId() {
+        return motherId;
+    }
+    public String getGender() {
+        return gender;
+    }
+
+    public void setFatherId(long fatherId) {
+        this.fatherId = fatherId;
+    }
+
+    public void setMotherId(long motherId) {
+        this.motherId = motherId;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+
 }
