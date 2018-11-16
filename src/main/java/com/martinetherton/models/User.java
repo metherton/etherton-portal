@@ -115,5 +115,11 @@ public class User {
         this.gender = gender;
     }
 
+    private String longitude;
+    private String latitude;
+
+    public String getLongitude() {return longitude;}
+    public String getLatitude() {return latitude;}
+
 
 }
