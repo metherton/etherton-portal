@@ -61,6 +61,7 @@ public class User {
         this.surname = surname;
     }
 
+
     private String placeOfBirth;
 
     public String getPlaceOfBirth() {
