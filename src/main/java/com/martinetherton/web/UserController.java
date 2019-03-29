@@ -86,5 +86,4 @@ public class UserController {
         return "User succesfully created with id = " + userId;
     }
 
-
 }
